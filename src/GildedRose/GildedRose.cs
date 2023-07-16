@@ -1,3 +1,5 @@
+namespace GildedRose;
+
 // https://github.com/NotMyself/GildedRose/blob/master/src/GildedRose.Console/Program.cs
 
 public class Item

@@ -1,6 +1,7 @@
-namespace CSharpXUnit;
+namespace CsCheckTests;
 
 using CsCheck;
+using GildedRose;
 
 public class PropertyBasedTestApproach {
     [Fact]
@@ -39,7 +40,7 @@ public class PropertyBasedTestApproach {
         (from name in Gen.String
          from quality in Gen.Int
          select new Item { Name = name, Quality = quality, SellIn = 10 })
-        .SampleOne(i =>
+        .Sample(i =>
         {
             var service = new GildedRose(new List<Item> { i });
             service.UpdateQuality();
@@ -53,7 +54,7 @@ public class PropertyBasedTestApproach {
         (from name in Gen.String
          from quality in Gen.Int.Positive
          select new Item { Name = name, Quality = quality, SellIn = 10 })
-        .SampleOne(i =>
+        .Sample(i =>
         {
             var service = new GildedRose(new List<Item> { i });
             service.UpdateQuality();
@@ -68,7 +69,7 @@ public class PropertyBasedTestApproach {
          from quality in Gen.Int.Positive
          from sellin in Gen.Int.Positive
          select new Item { Name = name, Quality = quality, SellIn = sellin })
-        .SampleOne(i =>
+        .Sample(i =>
         {
             var previousSellIn = i.SellIn;
             var service = new GildedRose(new List<Item> { i });

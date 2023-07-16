@@ -1,4 +1,6 @@
-namespace CSharpXUnit;
+namespace TraditionalTestApproach;
+
+using GildedRose;
 
 public class TraditionalTestApproach
 {
