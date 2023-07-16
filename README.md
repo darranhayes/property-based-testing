@@ -4,4 +4,4 @@ This repository reproduces a failing test described [here](https://ardalis.com/n
 
 Two property-based-testing libraries have been used here with the XUnit test framework:
 - [x] [CsCheck](https://github.com/AnthonyLloyd/CsCheck)
-- [ ] [FsCheck](https://github.com/fscheck/FsCheck)
+- [x] [FsCheck](https://github.com/fscheck/FsCheck)
